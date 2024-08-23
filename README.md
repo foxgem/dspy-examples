@@ -7,7 +7,7 @@ poetry install
 poetry shell
 ```
 
-create the `.env` including your apis
+create the `.env` including your api keys
 
 ## Examples
 
