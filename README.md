@@ -19,6 +19,10 @@ python mini.py
 
 ### "HTML Link" -> Summary
 
+```sh
+python html_summary/summary.py
+```
+
 ### ToDO
 
 1. pdf document -> summary
