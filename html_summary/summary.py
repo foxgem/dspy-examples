@@ -12,11 +12,15 @@ dspy.configure(lm=gpt4o)
 
 summary = dspy.ChainOfThoughtWithHint("document -> summary")
 document = extract_article_content(
-    "https://blog.dteam.top/posts/2024-03/passport-oauth2.html"
+    "https://blog.dteam.top/posts/2024-02/go-ethereum-cookbook.html"
 )
+
+
 response = summary(
-    document=document["content"],
+    document=document.content,
     hint="the summary should be written in the same language used by document",
 )
 
+print(document.title, ":")
+print("-" * 10)
 print(response.summary)

@@ -1,4 +1,10 @@
 from newspaper import Article
+from pydantic import BaseModel
+
+
+class ExtractedContent(BaseModel):
+    title: str
+    content: str
 
 
 def extract_article_content(url):
@@ -12,10 +18,7 @@ def extract_article_content(url):
         title = article.title
         text = article.text
 
-        return {
-            "title": title,
-            "content": text,
-        }
+        return ExtractedContent(title=article.title, content=article.text)
 
     except Exception as e:
         return f"An error occurred: {str(e)}"
