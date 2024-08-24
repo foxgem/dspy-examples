@@ -20,7 +20,7 @@ python mini.py
 ### "HTML Link" -> Summary
 
 ```sh
-python html_summary/summary.py
+python html_summary/ui.py
 ```
 
 ### ToDO
